@@ -1,20 +1,84 @@
-@charset "utf-8";
-/* ==========================================================================
-   1. CSS Reset Code
-   ========================================================================== */
-
-/* 1.1. Eric Meyers Reset
-   http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-   ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,131 +88,991 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
-/* Force scrollbar */
-html { overflow-y: scroll; }
-
-/* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
-
-/* Hand cursor on clickable input elements */
-label,
-input[type='button'],
-input[type='submit'],
-button {
-  cursor: pointer;
+body {
+  line-height: 1;
 }
 
-strong {
-  font-weight: bold;
-  font-family: inherit;
-  font-size: inherit;
+ol,
+ul {
+  list-style: none;
 }
 
-em { font-style: italic; }
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1360px;
+  width: 82%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* header css  */
+ul.header-contact {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #e1dddd;
+}
+header .wrapper {
+  width: 100%;
+}
+.location,
+.email,
+.call {
+  position: relative;
+  display: inline-block;
+  text-indent: -99999px;
+}
+
+.location::after {
+  content: "\f3c5";
+  color: #78b937;
+  font-family: fontAwesome;
+  font-size: 42px;
+  float: left;
+  text-indent: 0;
+}
+
+.email::after {
+  content: "\f2b6";
+  color: #78b937;
+  font-family: fontAwesome;
+  font-size: 44px;
+  float: left;
+  text-indent: 0;
+}
+
+.call::after {
+  content: "\f3ce";
+  color: #78b937;
+  font-family: fontAwesome;
+  font-size: 44px;
+  float: left;
+  text-indent: 0;
+}
+
+.header-details h3 {
+  color: #323232;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.header-icon {
+  margin-right: 18px;
+}
+
+li.header-list {
+  display: flex;
+  flex-basis: 33%;
+  justify-content: center;
+  padding: 15px 0;
+  border-right: 1px solid #e1dddd;
+}
+
+address.header-address {
+  color: #8d8c8c;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header-details a {
+  color: #8d8c8c;
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+h1.logo::before {
+  content: "\f54f";
+  color: #77bb3f;
+  font-family: "FontAwesome";
+  font-size: 36px;
+  margin-right: 12px;
+}
+
+h1.logo a {
+  color: #000;
+  font-size: 38px;
+  font-family: "Roboto";
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hamburger {
+  display: none;
+}
+
+.header-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+ul.header-menu {
+  display: flex;
+  margin-bottom: 25px;
+}
+.header-wrapper .wrapper {
+  width: 100%;
+}
+h1.logo {
+  flex-basis: 40%;
+  padding: 77px 32px 8px 44px;
+}
+
+ul.header-menu li a {
+  color: #333;
+  font-family: roboto;
+  font-weight: 600;
+  margin-right: 28px;
+  padding: 21px 0 0 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a.dropdown::after {
+  content: '\f107';
+  font-family: "fontAwesome";
+  padding-left: 4px;
+}
+ul.header-menu li a:hover {
+  border-top: 4px solid #79b730;
+  color: #79b730;
+}
+
+.contact-button {
+  background-color: #79b730;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 26px 56px;
+}
+
+.contact-button a {
+  color: #fff;
+  font-family: "Roboto";
+  text-decoration: none;
+}
+
+.contact-button a:after {
+  content: "\f061";
+  font-family: "FontAwesome";
+  padding-left: 4px;
+}
+
+/* banner section css  */
+section.banner {
+  background-image: url("/assets/img/hero.jpg");
+  background-attachment: inherit;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.banner-content {
+  padding-top: 48px;
+  width: 70%;
+}
+
+h2.banner-main-heading {
+  color: #20201e;
+  font-size: 80px;
+  font-family: "Roboto";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3.banner-sub-heading {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 600;
+  padding: 32px 0;
+  text-transform: uppercase;
+}
+
+p.banner-para {
+  color: #fff;
+  font-size: 28px;
+  font-family: "Roboto";
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.banner-button a.button-active {
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 18px 46px;
+}
+
+.banner-button {
+  margin-top: 90px;
+}
+
+a.video-button::before {
+  content: "\f04b";
+  font-family: "FontAwesome";
+  color: #77ba37;
+  margin-right: 15px;
+  border: 1px solid #fff;
+  padding: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+a.video-button {
+  margin-left: 30px;
+  font-size: 24px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  font-family: "Roboto";
+}
+
+/* about us css  */
+section.about-us {
+  padding-top: 97px;
+}
+
+.about {
+  display: flex;
+  gap: 50px;
+}
+
+figure.about-image {
+  flex-basis: 40%;
+}
+
+.about-content {
+  flex-basis: 60%;
+}
 
 img {
   width: 100%;
-  border: 0;
-  vertical-align: middle;
+  height: 100%;
 }
 
-sub,
-sup {
-  vertical-align: baseline;
-  position: relative;
-  font-size: 55%;
-  line-height: 0;
+.heading {
+  border-left: 4px solid #77ba37;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
-
-/* 1.2. Clear Fix
-   ========================== */
-
-.cf:before,
-.cf:after {
-  display: table;
-  content: " ";
+.heading h5 {
+  color: #77ba37;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 900;
+  padding-left: 47px;
+  text-transform: uppercase;
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
-
-/*for all*/
-body {
-  box-sizing: border-box;
-  font-family: sans-serif;
+.heading h3 {
+  color: #1d2529;
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  padding: 5px 0 0 47px;
+  text-transform: uppercase;
 }
 
-a { 
+p.about-para {
+  color: #626d70;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  padding-top: 49px;
+}
+
+.our-mission {
+  background-color: #f3f3f2;
+  padding: 26px;
+  margin-top: 30px;
+}
+
+ul.mission-vision-heading {
+  display: flex;
+  gap: 10px;
+}
+
+ul.mission-vision-heading li {
+  color: #79b730;
+  flex-basis: 50%;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul.mission-vision-heading li.active {
+  background: #79b730;
+  color: #fff;
+}
+
+ul.mission-vision-para li.active {
+  display: block;
+  padding: 10px 0 0 0;
+  color: #949696;
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+ul.mission-vision-para li {
+  display: none;
+}
+
+/* service section css  */
+section.services {
+  padding-top: 96px;
+}
+
+section.services .heading {
+  width: 50%;
+}
+
+ul.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 53px;
+  margin-top: 47px;
+}
+
+ul.service-list li {
+  display: flex;
+  flex-basis: 47%;
+  padding: 20px 10px 20px 0px;
+  background-color: #f3f3f3;
+}
+span.flaticon-house,
+span.flaticon-food,
+span.flaticon-grooming,
+span.flaticon-cat,
+span.flaticon-dog,
+span.flaticon-vaccine {
   display: inline-block;
-  text-decoration: none; 
+  padding: 6px 20px 0 20px;
+  text-indent: -99999px;
+}
+.service-content h4 {
+  color: #1d2529;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 21px;
+  text-transform: uppercase;
 }
 
-li {
+p.service-para {
+  color: #8c8e90;
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 21px;
+}
+
+.service-content a {
+  color: #75be46;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.service-content a::after {
+  content: "\f061";
+  font-family: "FontAwesome";
+  padding-left: 8px;
+}
+
+/* product css  */
+.product {
+  padding-top: 91px;
+}
+
+.product .heading {
+  width: 52%;
+}
+ul.product-list {
+  display: flex;
+  gap: 43px;
+  margin-top: 46px;
+}
+
+ul.product-list li {
+  background-color: #f3f3f3;
+  padding: 28px 30px;
+}
+
+figure.product-image {
+  height: 100%;
+  width: 100%;
+}
+
+.product-details h4 {
+  color: #433e3c;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 16px 0;
+}
+
+.product-details p {
+  color: #76bc3f;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.control span {
   display: inline-block;
-  list-style-type: none;
+  padding: 14px 20px;
+  margin: 44px 0;
+  background-color: #75be46;
+  color: #fff;
+  text-indent: -99999px;
+}
+span.left-arrow::before {
+  content: "\f060";
+  font-family: "FontAwesome";
+  float: left;
+  text-indent: 0;
+}
+span.right-arrow::after {
+  content: "\f061";
+  font-family: "FontAwesome";
+  float: left;
+  text-indent: 0;
+}
+section.price-plan {
+  padding-top: 74px;
+}
+section.price-plan .heading {
+  width: 56%;
 }
 
-/*for wrapper*/
-.wrapper {
-  max-width: 1360px;
-  width: 86%; 
+ul.price-list {
+  display: flex;
+  padding-top: 100px;
+  gap: 50px;
+}
+
+ul.price-list li {
+  background-color: #f3f3f3;
+  flex-basis: 33%;
+}
+ul.price-list li:nth-child(2) {
+  transform: translateY(-55px);
+}
+
+.price-heading {
+  text-align: center;
+  padding: 58px 0;
+}
+
+.price-heading h3 {
+  color: #1f2024;
+  font-family: roboto;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.price-heading h5 {
+  color: #7f7975;
+  font-family: "Roboto";
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.pricing.active {
+  background: #333;
+}
+.pricing {
+  display: flex;
+  justify-content: center;
+  background-color: #74c04c;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 58px;
+  font-weight: 900;
+  padding: 40px 0;
+  text-align: center;
+}
+span.dollar-sign {
+  font-size: 22px;
+}
+span.price-month {
+  font-size: 19px;
+  align-self: flex-end;
+}
+
+.price-para-content {
+  padding: 45px 23px 35px 23px;
+}
+
+p.price-para-list {
+  display: flex;
+  justify-content: space-between;
+  color: #7c7d81;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 28px;
+  text-transform: capitalize;
+}
+
+span.right-icon::after {
+  color: #74c251;
+  content: "\f00c";
+  float: right;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  text-indent: 0;
+}
+
+span.right-icon {
+  display: inline-block;
+  text-indent: -99999px;
+}
+
+span.cross-icon::after {
+  color: #b3606e;
+  content: "\f00d";
+  float: right;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  text-indent: 0;
+}
+
+span.cross-icon {
+  display: inline-block;
+  text-indent: -99999px;
+}
+
+button.price-button {
+  display: block;
+  margin: 0 auto;
+  padding: 13px 23px;
+  background-color: #74c251;
+  border: none;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* testimonial css  */
+
+.testimonial {
+  background-image: url(/assets/img/testimonial.jpg);
+  background-size: cover;
+  margin: 88px 0;
+  padding: 88px 0;
+}
+ul.testimonial-detail {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li.not-show {
+  display: none;
+}
+
+ul.testimonial-detail li {
+  background-color: #fff;
+  flex-basis: 58%;
+  padding: 50px 48px;
+}
+.testi-img-box {
+  display: flex;
+  flex-direction: column;
+}
+figure.testimonial-image {
+  width: 16%;
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
 
+span.message-icon::after {
+  content: "\f27a";
+  color: #74c456;
+  float: left;
+  font-family: "FontAwesome";
+  font-size: 18px;
+  text-indent: 0;
+}
 
+span.message-icon {
+  display: inline-block;
+  align-self: center;
+  background-color: #fff;
+  padding: 6px 11px;
+  text-indent: -99999px;
+  transform: translateY(-16px);
+}
+p.testimonial-para {
+  color: #9b9a9f;
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
+.testimonial-heading {
+  margin: 0 auto;
+  text-align: center;
+  width: 20%;
+}
 
+.testimonial-heading h3 {
+  border-top: 2px solid #dbd9da;
+  color: #383d37;
+  font-family: "Roboto";
+  font-weight: 500;
+  padding: 14px 0;
+  text-transform: uppercase;
+}
 
+.testimonial-heading span {
+  color: #979899;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+}
+.testimonial-box {
+  position: relative;
+}
 
-/*=================================
-  Header styling ends here
-=================================*/  
+span.testimonial-left-arrow {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 42%;
+  background: #74c456;
+  padding: 13px 14px;
+  text-indent: -99999px;
+}
 
-/*=================================
-  main styling starts here
-=================================*/
+span.testimonial-right-arrow {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  right: 0px;
+  background: #74c456;
+  padding: 13px 14px;
+  text-indent: -99999px;
+}
+span.testimonial-left-arrow:after {
+  content: "\f30a";
+  color: #fff;
+  font-family: "FontAwesome";
+  float: left;
+  text-indent: 0;
+}
 
+span.testimonial-right-arrow::after {
+  content: "\f178";
+  color: #fff;
+  font-family: "FontAwesome";
+  float: right;
+  text-indent: 0;
+}
 
+/* footer css section  */
 
+footer {
+  background-color: #f3f3f3;
+}
 
+ul.contact-detail {
+  display: flex;
+  gap: 52px;
+  padding-top: 93px;
+}
 
+ul.contact-detail li {
+  flex-basis: 25%;
+}
 
+.footer-heading h4 {
+  border-left: 3px solid #74c65b;
+  color: #2a292f;
+  font-family: "Roboto";
+  font-size: 19px;
+  font-weight: 700;
+  margin: 11px 0 28px 0;
+  padding: 0px 15px;
+  text-transform: uppercase;
+}
+.footer-heading p {
+  color: #656568;
+  font-family: "Roboto";
+  font-size: 17px;
+  line-height: 22px;
+  margin-bottom: 29px;
+}
 
+span.footer-location-icon::before {
+  content: "\f3c5";
+  color: #74c65b;
+  font-family: "FontAwesome";
+  padding-right: 8px;
+}
 
-/*=================================
-  main styling ends here
-=================================*/
+span.footer-location-icon {
+  color: #656568;
+  font-family: roboto;
+  font-size: 15px;
+  font-weight: 400;
+}
 
-/*=================================
-  footer styling starts here
-=================================*/ 
+a.email-address::before {
+  content: "\f0e0";
+  color: #74c85f;
+  font-family: "FontAwesome";
+  padding-right: 8px;
+}
 
+a.email-address {
+  display: block;
+  color: #656568;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 16px 0;
+}
 
+a.phone-address:before {
+  content: "\f095";
+  color: #74c85f;
+  font-family: "FontAwesome";
+  padding-right: 8px;
+}
 
+a.phone-address {
+  display: block;
+  color: #656568;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  margin: 16px 0;
+  text-decoration: none;
+}
 
+ul.footer-menu li {
+  color: #656568;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
 
+ul.footer-menu li a:before {
+  content: "\f30b";
+  color: #74c85f;
+  font-family: "FontAwesome";
+  padding-right: 10px;
+}
 
+ul.footer-menu li a {
+  text-decoration: none;
+  color: #656568;
+}
 
- /*=================================
-  footer styling ends here
-=================================*/ 
+.form form {
+  display: flex;
+}
 
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+.form-input-container input {
+  border: 1px solid #e1e1e1;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 18px 12px;
+  width: 100%;
+}
+.form-button-container input {
+  background-color: #74c85f;
+  border: 1px solid #74c85f;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 17px 13px;
+}
+h5.social-heading {
+  color: #3b3a3c;
+  font-family: "roboto";
+  font-weight: 500;
+  margin: 26px 0 22px 0;
+  text-transform: uppercase;
+}
 
+ul.social-list {
+  display: flex;
+}
 
+.twitter,
+.facebook,
+.linkedin,
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #74ca63;
+  text-decoration: none;
+}
 
-}  
+ul.social-list li a.twitter:before {
+  content: "\f099";
+  color: #74ca63;
+  font-family: "FontAwesome";
+}
+ul.social-list li a.facebook:before {
+  content: "\f09a";
+  color: #74ca63;
+  font-family: "FontAwesome";
+}
+ul.social-list li a.linkedin:before {
+  content: "\f08c";
+  color: #74ca63;
+  font-family: "FontAwesome";
+}
+ul.social-list li a.instagram:before {
+  content: "\f16d";
+  color: #74ca63;
+  font-family: "FontAwesome";
+}
+ul.social-list li {
+  flex-basis: 19%;
+}
+ul.helps-link {
+  display: flex;
+  justify-content: center;
+  margin: 52px 0;
+}
+
+ul.helps-link li a {
+  border-right: 2px solid #656568;
+  color: #333;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+.bottom-to-top-function {
+  position: fixed;
+  right: 28px;
+  bottom: 44px;
+  border: 1px solid #74cc67;
+  background-color: #74ca63;
+  padding: 24px 15px;
+}
+
+.bottom-to-top-function a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom-to-top-function a:before {
+  content: "\f176";
+  font-family: "fontAwesome";
+  font-size: 20px;
+}
+.footer-bottom {
+  background-color: #212121;
+  padding: 28px 0;
+}
+
+ul.copyright {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.footer-bottom-para {
+  color: #656568;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+p.footer-bottom-para span {
+  color: #fff;
+}
+p.footer-bottom-para a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+ul.helps-link li:last-child a {
+  border-right: none;
+}
