@@ -1132,15 +1132,18 @@ ul.helps-link li:last-child a {
     margin-top: 60px;
   }
   .heading h3 {
-    font-size: 38px;
-    line-height: 44px;
+    font-size: 29px;
+    line-height: 38px;
+  }
+  figure.about-image {
+    flex-basis: 60%;
   }
   p.about-para {
     font-size: 20px;
     line-height: 26px;
   }
   ul.mission-vision-para li.active {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
   }
   .testimonial-heading {
@@ -1191,5 +1194,35 @@ ul.helps-link li:last-child a {
   }
   section.price-plan .heading {
     width: 64%;
+  }
+  .price-heading h3 {
+    font-size: 26px;
+  }
+  ul.contact-detail {
+    gap: 36px;
+  }
+  ul.contact-detail li {
+    flex-basis: 20%;
+  }
+  ul.footer-menu li {
+    font-size: 14px;
+  }
+  ul.helps-link li a {
+    font-weight: 500;
+    padding: 0 10px;
+  }
+  ul.service-list li {
+    flex-basis: 46%;
+  }
+  .footer-heading p {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .footer-heading h4 {
+    font-size: 18px;
+  }
+  ul.footer-menu li a:before {
+    padding-right: 4px;
+    font-size: 12px;
   }
 }
