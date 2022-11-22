@@ -281,17 +281,14 @@ ul.header-menu li a:hover {
   color: #79b730;
 }
 
-.contact-button {
-  background-color: #79b730;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 26px 56px;
-}
-
 .contact-button a {
+  background-color: #79b730;
   color: #fff;
   font-family: "Roboto";
+  font-weight: 600;
+  padding: 26px 56px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .contact-button a:after {
@@ -1079,6 +1076,38 @@ p.footer-bottom-para a {
 }
 ul.helps-link li:last-child a {
   border-right: none;
+}
+
+/* hover css  */
+a.button-active:hover {
+  background: #74cc67;
+  border-color: #74cc67;
+}
+
+.service-content a:hover {
+  color: #333;
+}
+
+button.price-button:hover {
+  background-color: #fff;
+  color: #74c456;
+  border: 1px solid #74cc67;
+}
+
+ul.footer-menu li a:hover {
+  color: #74cc67;
+}
+
+ul.social-list li a:hover {
+  background: #fff;
+}
+
+ul.helps-link li a:hover {
+  color: #74ca63;
+}
+
+p.footer-bottom-para a:hover {
+  color: #74cc67;
 }
 
 /* Responsive work 1100px */
