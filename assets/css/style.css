@@ -1077,7 +1077,7 @@ ul.helps-link li:last-child a {
   border-right: none;
 }
 
-/* Responsive work  */
+/* Responsive work 1100px */
 @media screen and (max-width: 1100px) {
   .header-bottom {
     flex-wrap: nowrap;
@@ -1100,5 +1100,96 @@ ul.helps-link li:last-child a {
   }
   ul.social-list li {
     flex-basis: 25%;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+/* Responsive work 995px */
+@media screen and (max-width: 995px) {
+  .form form {
+    flex-direction: column;
+  }
+  .form-input-container input {
+    margin-bottom: 20px;
+  }
+  h1.logo {
+    padding: 30px 0 0 44px;
+  }
+  h1.logo a {
+    font-size: 34px;
+  }
+  .contact-button {
+    padding: 26px 46px;
+  }
+  h2.banner-main-heading {
+    font-size: 60px;
+  }
+  h3.banner-sub-heading {
+    font-size: 36px;
+  }
+  .banner-button {
+    margin-top: 60px;
+  }
+  .heading h3 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  p.about-para {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  ul.mission-vision-para li.active {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .testimonial-heading {
+    width: 36%;
+  }
+  .header-bottom {
+    position: relative;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 36%;
+    right: 9%;
+  }
+  .hamburger .bar {
+    display: block;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #000;
+    font-size: 0;
+    text-indent: 0;
+  }
+  .hamburger {
+    position: absolute;
+    top: 12%;
+    padding: 16px;
+    border: 1px solid #3e3c3c;
+    font-size: 20px;
+  }
+  .icon-bars {
+    width: 41px;
+  }
+  ul.header-menu {
+    display: none;
+  }
+  .header-bottom {
+    padding-bottom: 30px;
+  }
+  .contact-button {
+    display: none;
+  }
+  section.services .heading {
+    width: 58%;
+  }
+  .product .heading {
+    width: 58%;
+  }
+  section.price-plan .heading {
+    width: 64%;
   }
 }
