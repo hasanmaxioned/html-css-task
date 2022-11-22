@@ -272,7 +272,7 @@ ul.header-menu li a {
   text-transform: uppercase;
 }
 a.dropdown::after {
-  content: '\f107';
+  content: "\f107";
   font-family: "fontAwesome";
   padding-left: 4px;
 }
@@ -1075,4 +1075,30 @@ p.footer-bottom-para a {
 }
 ul.helps-link li:last-child a {
   border-right: none;
+}
+
+/* Responsive work  */
+@media screen and (max-width: 1100px) {
+  .header-bottom {
+    flex-wrap: nowrap;
+  }
+  section.services .heading {
+    width: 54%;
+  }
+  .heading h3 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  ul.service-list {
+    gap: 40px;
+  }
+  .product .heading {
+    width: 54%;
+  }
+  section.price-plan .heading {
+    width: 60%;
+  }
+  ul.social-list li {
+    flex-basis: 25%;
+  }
 }
