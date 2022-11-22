@@ -1225,4 +1225,65 @@ ul.helps-link li:last-child a {
     padding-right: 4px;
     font-size: 12px;
   }
+  ul.product-list {
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  ul.product-list li {
+    flex-basis: 46%;
+  }
+}
+/* Responsive work 768px */
+@media screen and (max-width: 995px) {
+  ul.header-contact {
+    display: none;
+  }
+  h1.logo {
+    flex-basis: 80%;
+  }
+  .banner-content {
+    width: 100%;
+  }
+  .about {
+    gap: 50px;
+    flex-direction: column;
+  }
+  figure.about-image {
+    flex-basis: 100%;
+  }
+  section.services .heading {
+    width: 100%;
+  }
+  ul.service-list {
+    flex-direction: column;
+  }
+  .product .heading {
+    width: 100%;
+  }
+  section.price-plan .heading {
+    width: 100%;
+  }
+  ul.price-list {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  ul.price-list li:nth-child(2) {
+    transform: translateY(0px);
+  }
+  ul.testimonial-detail li {
+    flex-basis: 100%;
+  }
+  span.testimonial-left-arrow {
+    left: 0%;
+  }
+  ul.contact-detail {
+    flex-wrap: wrap;
+    padding: 60px 0;
+  }
+  ul.contact-detail li {
+    flex-basis: 46%;
+  }
+  ul.helps-link {
+    display: none;
+  }
 }
