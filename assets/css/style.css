@@ -272,7 +272,7 @@ ul.header-menu li a {
   text-transform: uppercase;
 }
 a.dropdown::after {
-  content: '\f107';
+  content: "\f107";
   font-family: "fontAwesome";
   padding-left: 4px;
 }
@@ -281,17 +281,14 @@ ul.header-menu li a:hover {
   color: #79b730;
 }
 
-.contact-button {
-  background-color: #79b730;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 26px 56px;
-}
-
 .contact-button a {
+  background-color: #79b730;
   color: #fff;
   font-family: "Roboto";
+  font-weight: 600;
+  padding: 26px 56px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .contact-button a:after {
@@ -338,7 +335,11 @@ p.banner-para {
   line-height: 1.2;
   font-weight: 500;
 }
-
+.banner-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .banner-button a.button-active {
   border: 2px solid #fff;
   color: #fff;
@@ -1075,4 +1076,308 @@ p.footer-bottom-para a {
 }
 ul.helps-link li:last-child a {
   border-right: none;
+}
+
+/* hover css  */
+a.button-active:hover {
+  background: #74cc67;
+  border-color: #74cc67;
+}
+
+.service-content a:hover {
+  color: #333;
+}
+
+button.price-button:hover {
+  background-color: #fff;
+  color: #74c456;
+  border: 1px solid #74cc67;
+}
+
+ul.footer-menu li a:hover {
+  color: #74cc67;
+}
+
+ul.social-list li a:hover {
+  background: #fff;
+}
+
+ul.helps-link li a:hover {
+  color: #74ca63;
+}
+
+p.footer-bottom-para a:hover {
+  color: #74cc67;
+}
+
+/* Responsive work 1100px */
+@media screen and (max-width: 1100px) {
+  .header-bottom {
+    flex-wrap: nowrap;
+  }
+  section.services .heading {
+    width: 54%;
+  }
+  .heading h3 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  ul.service-list {
+    gap: 40px;
+  }
+  .product .heading {
+    width: 54%;
+  }
+  section.price-plan .heading {
+    width: 60%;
+  }
+  ul.social-list li {
+    flex-basis: 25%;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+/* Responsive work 995px */
+@media screen and (max-width: 995px) {
+  .form form {
+    flex-direction: column;
+  }
+  .form-input-container input {
+    margin-bottom: 20px;
+  }
+  h1.logo {
+    padding: 30px 0 0 44px;
+  }
+  h1.logo a {
+    font-size: 34px;
+  }
+  .contact-button {
+    padding: 26px 46px;
+  }
+  h2.banner-main-heading {
+    font-size: 60px;
+  }
+  h3.banner-sub-heading {
+    font-size: 36px;
+  }
+  .banner-button {
+    margin-top: 60px;
+  }
+  .heading h3 {
+    font-size: 29px;
+    line-height: 38px;
+  }
+  figure.about-image {
+    flex-basis: 60%;
+  }
+  p.about-para {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  ul.mission-vision-para li.active {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .testimonial-heading {
+    width: 36%;
+  }
+  .header-bottom {
+    position: relative;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 36%;
+    right: 9%;
+  }
+  .hamburger .bar {
+    display: block;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #000;
+    font-size: 0;
+    text-indent: 0;
+  }
+  .hamburger {
+    position: absolute;
+    top: 12%;
+    padding: 16px;
+    border: 1px solid #3e3c3c;
+    font-size: 20px;
+  }
+  .icon-bars {
+    width: 41px;
+  }
+  ul.header-menu {
+    display: none;
+  }
+  .header-bottom {
+    padding-bottom: 30px;
+  }
+  .contact-button {
+    display: none;
+  }
+  section.services .heading {
+    width: 58%;
+  }
+  .product .heading {
+    width: 58%;
+  }
+  section.price-plan .heading {
+    width: 64%;
+  }
+  .price-heading h3 {
+    font-size: 26px;
+  }
+  ul.contact-detail {
+    gap: 36px;
+  }
+  ul.contact-detail li {
+    flex-basis: 20%;
+  }
+  ul.footer-menu li {
+    font-size: 14px;
+  }
+  ul.helps-link li a {
+    font-weight: 500;
+    padding: 0 10px;
+  }
+  ul.service-list li {
+    flex-basis: 46%;
+  }
+  .footer-heading p {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .footer-heading h4 {
+    font-size: 18px;
+  }
+  ul.footer-menu li a:before {
+    padding-right: 4px;
+    font-size: 12px;
+  }
+  ul.product-list {
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  ul.product-list li {
+    flex-basis: 46%;
+  }
+}
+/* Responsive work 768px */
+@media screen and (max-width: 768px) {
+  ul.header-contact {
+    display: none;
+  }
+  h1.logo {
+    flex-basis: 80%;
+  }
+  .banner-content {
+    width: 100%;
+  }
+  .about {
+    gap: 50px;
+    flex-direction: column;
+  }
+  figure.about-image {
+    flex-basis: 100%;
+  }
+  section.services .heading {
+    width: 100%;
+  }
+  ul.service-list {
+    flex-direction: column;
+  }
+  .product .heading {
+    width: 100%;
+  }
+  section.price-plan .heading {
+    width: 100%;
+  }
+  ul.price-list {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  ul.price-list li:nth-child(2) {
+    transform: translateY(0px);
+  }
+  ul.testimonial-detail li {
+    flex-basis: 100%;
+  }
+  span.testimonial-left-arrow {
+    left: 0%;
+  }
+  ul.contact-detail {
+    flex-wrap: wrap;
+    padding: 60px 0;
+  }
+  ul.contact-detail li {
+    flex-basis: 46%;
+  }
+  ul.helps-link {
+    display: none;
+  }
+}
+/* Responsive work 540px */
+
+@media screen and (max-width: 540px) {
+  h2.banner-main-heading {
+    font-size: 36px;
+  }
+  h3.banner-sub-heading {
+    font-size: 30px;
+  }
+  p.banner-para {
+    font-size: 18px;
+  }
+  .banner-button {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+  a.video-button {
+    margin-left: 0;
+  }
+  p.about-para {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  ul.product-list li {
+    flex-basis: 100%;
+  }
+  .product-details h4 {
+    font-size: 22px;
+  }
+  .product-details p {
+    font-size: 20px;
+  }
+  figure.testimonial-image {
+    width: 30%;
+  }
+  ul.contact-detail li {
+    flex-basis: 100%;
+  }
+  ul.social-list {
+    gap: 10px;
+  }
+  ul.social-list li {
+    flex-basis: 0;
+  }
+  ul.copyright {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/* Responsive work 375px */
+@media screen and (max-width: 375px) {
+  h1.logo a {
+    font-size: 34px;
+  }
+  h1.logo {
+    flex-basis: 100%;
+    padding: 30px 0 0 14px;
+  }
 }
